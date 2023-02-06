@@ -1,0 +1,31 @@
+---
+version: 1
+kind: component
+
+requires:
+- azure
+- terraform
+
+parameters:
+
+- name: terraform
+  parameters:
+  - name: stateContainer
+    env: STATE_CONTAINER
+  - name: resourceGroupName
+    env: AZURE_RESOURCE_GROUP_NAME
+
+- name: aksNodePool
+  parameters:
+  - name: clusterName
+    value: hub-aks
+    env: TF_VAR_cluster_name  
+  - name: poolName
+    value: hub-aks-defaul-pool
+    env: TF_VAR_pool_name
+  - name: resourceGroupName
+    env: TF_VAR_resource_group_name
+  - name: vmSize
+    env: TF_VAR_vm_size
+  - name: nodeCount
+    env: TF_VAR_node_count
