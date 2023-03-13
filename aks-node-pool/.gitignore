@@ -1,3 +1,0 @@
-.terraform/
-_backend.tf
-.terraform.lock.hcl

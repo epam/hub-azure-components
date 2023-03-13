@@ -7,20 +7,20 @@ requires:
 - terraform
 
 parameters:
-
-- name: terraform
+- name: azure
   parameters:
-  - name: stateContainer
-    env: STATE_CONTAINER
-  - name: resourceGroupName
-    env: AZURE_RESOURCE_GROUP_NAME
-
-- name: aks
-  parameters:
-  - name: name
-    value: hub-aks
-    env: TF_VAR_name
   - name: location
     env: TF_VAR_location
   - name: resourceGroupName
     env: TF_VAR_resource_group_name
+- name: kubernetes
+  parameters:
+  - name: cluster.name
+    env: TF_VAR_name
+  - name: cluster.version
+    env: TF_VAR_kubernetes_version
+  - name: node.machineType
+    env: TF_VAR_machine_type
+  - name: node.count
+    env: TF_VAR_node_count
+    
