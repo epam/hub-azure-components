@@ -40,4 +40,4 @@ outputs:
 - name: azure.storageAccount.containerName
   value: ${azure.storageAccount.defaultContainerName}
 - name: azure.storageAccount.accessKey
-  fromTfVar: storage_account_primary_access_key                    
+  fromTfVar: sensitive_storage_account_primary_access_key                    
